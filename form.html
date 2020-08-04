@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Formulario de reserva de tour</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="css/tablet.css" rel="stylesheet" media="screen and (max-width:800px)" />
+	<link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:480px)" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="mainform">
+<nav>
+	<ul class="anclas">
+		<li><a href="index.html"><span id="casa">Home</span></a></li>
+		<li><a href="itinerario.html"><span id="brujula">Itinerario</span></a></li>
+		<li><a href="info.html"><span id="letrai">Info</span></a></li>
+		<li><a class="actual" href="form.html"><span id="bus">Reservas</span></a></li>
+	</ul>
+</nav>
+<main>
+
+
+
+	<div class="banner-area" id="reservas">
+				<h1> Reservas </h1>
+	</div>
+
+<section id="partform">
+<div id="leftdata">
+	<h2>Reservá tu lugar en el tour</h2>
+	<p> Por favor completá este formulario con tus datos así nos podemos contactar con vos. <span>En esta visita guiada en la que seguiremos las huellas del Arquitecto Francisco Salamone, recorriendo varias de sus obras más importantes.</span> Para más información sobre el recorrido, <a href="itinerario.html">entrá acá.</a>
+ Todos los tours parten desde <span>el punto de encuentro que es </span>la Plaza San Martín, también primera parada de nuestro recorrido.</p>
+		<div class="centerpic">		<iframe src="https://www.google.com/maps/d/embed?mid=1sKcZJrz4aVJ_YnoSHrI3TDI0A-U17h9C" ></iframe>
+	  </div>
+</div>
+
+<div class="clear"></div>
+
+		<div class="formulario">
+			<div class="form">
+			<form action="sent.php" method:POST enctype="multipart/form-data">
+				<span>Nombre y apellido*</span>
+				<input type="text" name="nombre" required/>
+
+				<span>Correo electrónico*</span>
+				<input type="email" name="mail" required placeholder="nombre@mail.com"/>
+
+				<span>Día</span>
+				<input type="date" name="fecha" max="2020-12-23"/>
+
+				<span>Hora</span>
+				<input type="time" name="horario" min="09:00" max="18:00" step="1800"/>
+
+				<span>Cantidad de personas (máx 5)</span>
+				<input type="number" name="pax" min="1" max="5" value="1"/>
+
+
+				<span>Para más de 5, adjuntar lista de pasajeros</span>
+				<input type="file" id="myFile" name="filename">
+
+				<span>Idioma de preferencia</span>
+				<select name="idioma">
+				<option value="EN">Inglés</option>
+				<option value="PT">Portugués</option>
+				<option value="ES" selected>Español</option>
+				</select>
+
+				<input type="submit" value="Enviar"/>
+			</form>
+			</div>
+		</div>
+
+</section>
+
+
+</main>
+
+<footer>
+	<div class="centerpic">	<div id="logo"> </div> </div>
+	<div class="centerpic"> <div id="social">
+	    <a id="facebook" href="https://www.facebook.com/municipiodeazul"><span>facebook</span></a>
+	    <a id="twitter" href="https://twitter.com/ComunicAzul"><span>twitter</span></a>
+	    <a id="youtube" href="https://www.youtube.com/user/municipalidaddeazul"><span>youtube</span></a>
+	</div> </div>
+	<p><span> Municipalidad de Azul
+	<br>Hipólito Yrigoyen 424 - <abbr title="Código postal">CP</abbr> B7300BXH
+	<br>02281 439500 - 0800 333 2281 </span></p>
+</footer>
+
+</div>
+</body>
+</html>
